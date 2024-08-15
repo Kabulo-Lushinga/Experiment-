@@ -44,13 +44,14 @@ button, input {
     max-width: 460px;
     padding: 200px 40px;
     background: rgba(5, 5, 5, 0.28);
-    backdrop-filter: blur(50px);
+    backdrop-filter: blur(70px);
     box-sizing: border-box;
 } 
 
 .signup > h2 {
     margin: 0 0 6px;
     color: rgb(255 255 255 / 96%);
+    
 }
 
 .signup > h3 {
@@ -137,19 +138,29 @@ input:focus {
 
 }
 
+/* .submit-button p{
+    text-align: center;
+} */
+
 .submit-button{
-padding: 12pxx 24px;
-font-size: 1.2rem;
-background-color: #211b49;
-color:#f9f9f9;
-border: none;
-cursor:pointer;
-transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12pxx 24px; 
+    font-size: 0.9rem;
+    text-align: center;
+    height: 40px;
+    width: 205px;
+    background-color: #211b49;
+    color:#f9f9f9;
+    border: none;
+    cursor:pointer;
+    transition: background-color 0.3s ease;
 
 }
 
 .submit-button:hover{
-    background-color: aqua;
+    background-color: rgb(18, 10, 48);
 
 }
 
