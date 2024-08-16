@@ -5,11 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="./script.js" type="module">
-    </script>
+
+
   </head>
   <body>
-    <div class="background">
+  <script src="./script.js" type="module">
+  </script>
+  <script type="module">
+    import {emailSignup} from './script.js' ;function call(){emailSignup("geraldaphiri@gmail.com","12345678")}
+    document.getElementById ("signup").addEventListener ("click", call , false);
+  </script>
+    <div class="background">emailSignup('gerald@gmail.com','password')
       <ul class="background">
         <li></li>
         <li></li>
@@ -63,7 +69,8 @@
           <label for="phone">Password</label>
         </div>
         <!--type="submit"-->
-        <button  onclick="emailSignup('gerald','password')" class="submit-button">Signup</button>
+
+        <button  id="signup" class="submit-button">Signup</button>
       </form>
 
       <p>

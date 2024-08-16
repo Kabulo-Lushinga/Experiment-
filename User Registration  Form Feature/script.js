@@ -1,20 +1,19 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
-import {
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";import {
     createUserWithEmailAndPassword,
     getAuth,
     onAuthStateChanged, signInWithEmailAndPassword,
-} from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js";
+} from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCjpwX1WD8_PDzb0eYSJm4sHGJoOGTHsqw",
-  authDomain: "video-website-52fed.firebaseapp.com",
-  databaseURL: "https://video-website-52fed-default-rtdb.firebaseio.com",
-  projectId: "video-website-52fed",
-  storageBucket: "video-website-52fed.appspot.com",
-  messagingSenderId: "858972884092",
-  appId: "1:858972884092:web:3035310cf23cea60bb8df9",
-  measurementId: "G-L1SPXCWK9S"
+    apiKey: "AIzaSyCjpwX1WD8_PDzb0eYSJm4sHGJoOGTHsqw",
+    authDomain: "video-website-52fed.firebaseapp.com",
+    databaseURL: "https://video-website-52fed-default-rtdb.firebaseio.com",
+    projectId: "video-website-52fed",
+    storageBucket: "video-website-52fed.appspot.com",
+    messagingSenderId: "858972884092",
+    appId: "1:858972884092:web:06c2cbe42cdb2de8bb8df9",
+    measurementId: "G-6D73MQ57JT"
 };
 
 // Initialize Firebase
