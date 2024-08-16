@@ -1,14 +1,6 @@
 {
-  "name": "experiment-",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Kabulo-Lushinga/Experiment-"
-  },
-  "private": true
+  "dependencies": {
+    "firebase": "^10.13.0",
+    "touch": "^3.1.1"
+  }
 }
