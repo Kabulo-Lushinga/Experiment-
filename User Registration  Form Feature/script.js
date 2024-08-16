@@ -1,6 +1,10 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-app.js";
-import { getAnalytics } from "firebase/analytics";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
+import {
+    createUserWithEmailAndPassword,
+    getAuth,
+    onAuthStateChanged, signInWithEmailAndPassword,
+} from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js";
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyCjpwX1WD8_PDzb0eYSJm4sHGJoOGTHsqw",
@@ -15,7 +19,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+//const analytics = getAnalytics(app);
 
 export function emailSignup(email, password){
     const auth = getAuth();
