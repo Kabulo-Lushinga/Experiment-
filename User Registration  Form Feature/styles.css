@@ -1,9 +1,13 @@
+*{ 
+    margin: 0;
+    padding: 0 30px;
+    scroll-behavior: smooth;
+}
+
 body {
     display: grid;
     place-items: center;
     height: 100vh;
-    padding: 0 30px;
-    margin: 0;
     font-size: 14px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
@@ -19,19 +23,6 @@ button, input {
     outline: none;
 
 }
-
-/* .signup {
-    position: fixed;
-    z-index: 99;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 50%;
-    max-width: 460px;
-    padding: 200px 40px;
-    background: rgba(5, 5, 5, 0.28);
-    backdrop-filter: blur(50px);
-} */
 
 .signup {
     position: fixed;
@@ -49,7 +40,9 @@ button, input {
 } 
 
 .signup > h2 {
-    margin: 0 0 6px;
+    text-align: center;
+    padding-bottom: 10px;
+    margin: 2 0 6px;
     color: rgb(255 255 255 / 96%);
     
 }
@@ -85,7 +78,6 @@ button, input {
 .textbox input {
     padding: 0 12px 0 1px;
     border-bottom: 2px solid rgb(255 255 255 / 5%);
-    /* border-width: 5cm; */
     color: rgb(255 255 255 / 96%);
     height: 72px;
     transition: 0.3s;
@@ -138,17 +130,17 @@ input:focus {
 
 }
 
-/* .submit-button p{
-    text-align: center;
-} */
+ button{
+    align-items: center;
+} 
 
 .submit-button{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 12pxx 24px; 
-    font-size: 0.9rem;
+    padding: 10px 10px; 
     text-align: center;
+    font-size: 0.9rem;
     height: 40px;
     width: 205px;
     background-color: #211b49;
@@ -199,7 +191,7 @@ input:focus {
 
 .background li {
     position: absolute;
-    top: 80vh;
+    top: 70vh;
     left: 45vw;
     width: 10px;
     height: 10px;
@@ -207,12 +199,12 @@ input:focus {
     color: transparent;
     transform-origin: top left;
     transform: scale(0) rotate(0deg) translate(-50%, -50%);
-    animation: cube 19s ease-in forwards infinite;
+    animation: cube 10s ease-in forwards infinite;
 }
 
 undefined
 .background li:nth-child(0) {
-    animation-delay: 1s;
+    animation-delay: 2s;
     left: 17vw;
     top: 73vh;
     border-color: #ffffff;
@@ -246,7 +238,7 @@ undefined
 .background li:nth-child(5) {
     animation-delay: 10s;
     left: 22vw;
-    top: 17vh;
+    top: 12vh;
     border-color: #ffffff;
 }
 
