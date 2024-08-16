@@ -2,5 +2,6 @@
   "dependencies": {
     "firebase": "^10.13.0",
     "touch": "^3.1.1"
-  }
+  },
+  "type": "module"
 }

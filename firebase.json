@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "User Registration  Form Feature",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
