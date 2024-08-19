@@ -4,6 +4,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/fireba
     onAuthStateChanged, signInWithEmailAndPassword,
 } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
 
+    import {getDatabase, ref, set} from "https://www.gstatic.com/firebasejs/10.13.0/firebase-database.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyCjpwX1WD8_PDzb0eYSJm4sHGJoOGTHsqw",
@@ -20,21 +21,22 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 //const analytics = getAnalytics(app);
 
-export function emailSignup(email, password){
+export function emailSignup(email, password,json){
     const auth = getAuth();
     createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
         const user = userCredential.user;
-        
+        setDetails(user.id,json)
     })
     .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
+        alert(errorMessage)
         // ..
     });
 }
 
-function emailSignin(email, password){
+export function emailSignin(email, password){
     const auth = getAuth();
     signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
@@ -47,7 +49,14 @@ function emailSignin(email, password){
     });
 }
 
+function setDetails(id,json){
+    const db = getDatabase();
+    set(ref(db, 'database/users/' + id), json);
+}
+
 
 function setProfile(name){
 
 }
+
+

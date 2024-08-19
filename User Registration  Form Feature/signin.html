@@ -12,10 +12,17 @@
   <script src="./script.js" type="module">
   </script>
   <script type="module">
-    import {emailSignup} from './script.js' ;function call(){emailSignup("geraldaphiri@gmail.com","12345678")}
+    import {emailSignup} from './script.js';
+    function call(){emailSignup(
+            document.getElementById ("email").value,
+            document.getElementById ("password").value,
+            {
+              name:document.getElementById ("name").value,
+              phone:document.getElementById ("phone").value
+            })}
     document.getElementById ("signup").addEventListener ("click", call , false);
   </script>
-    <div class="background">emailSignup('gerald@gmail.com','password')
+    <div class="background">
       <ul class="background">
         <li></li>
         <li></li>
@@ -44,12 +51,12 @@
       <h2>Sign Up</h2>
       <form class="form">
         <div class="textbox">
-          <input type="text" required />
+          <input id="name" type="text" required />
           <label>Name</label>
         </div>
 
         <div class="textbox">
-          <input type="email" required />
+          <input id="email" type="email" required />
           <label>Email</label>
         </div>
 
