@@ -27,8 +27,8 @@ export function emailSignup(email, password,json){
     createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
         const user = userCredential.user;
-        alert(user)
-        setDetails(user.id,json)
+        //alert(user)
+        setDetails(user.uid,json)
     })
     .catch((error) => {
         const errorCode = error.code;
