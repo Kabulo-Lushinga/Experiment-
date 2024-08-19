@@ -13,14 +13,25 @@
   </script>
   <script type="module">
     import {emailSignup} from './script.js';
-    function call(){emailSignup(
-            document.getElementById ("email").value,
-            document.getElementById ("password").value,
-            {
-              name:document.getElementById ("name").value,
-              phone:document.getElementById ("phone").value
-            })}
-    document.getElementById ("signup").addEventListener ("click", call , false);
+    const form=document.getElementById("form");
+    function submitForm(event){
+
+      //Preventing page refresh
+      event.preventDefault();
+
+      emailSignup(
+              document.getElementById ("email").value,
+              document.getElementById ("password").value,
+              {
+                name:document.getElementById ("name").value,
+                phone:document.getElementById ("phone").value
+              });
+    }
+
+    //Calling a function during form submission.
+    form.addEventListener('submit', submitForm);
+
+    //document.getElementById ("signup").addEventListener ("click", submitForm , false);
   </script>
     <div class="background">
       <ul class="background">
@@ -49,7 +60,7 @@
     </div>
     <div class="signup">
       <h2>Sign Up</h2>
-      <form class="form">
+      <form id="form" class="form">
         <div class="textbox">
           <input id="name" type="text" required />
           <label>Name</label>

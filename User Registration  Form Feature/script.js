@@ -23,9 +23,11 @@ const app = initializeApp(firebaseConfig);
 
 export function emailSignup(email, password,json){
     const auth = getAuth();
+    //alert(email)
     createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
         const user = userCredential.user;
+        alert(user)
         setDetails(user.id,json)
     })
     .catch((error) => {
