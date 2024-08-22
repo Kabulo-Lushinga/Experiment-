@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
     <link rel="stylesheet" href="styles.css" />
-    <script type="module">
-      import {emailSignin} from './script.js';
-      function call(){emailSignin(document.getElementById ("email").value,
-              document.getElementById ("password").value)}
-      document.getElementById ("signin").addEventListener ("click", call , false);
-    </script>
+
   </head>
   <body>
+  <script type="module">
+    import {emailSignin} from './script.js';
+    function call(event){
+      event.preventDefault();
+    emailSignin(document.getElementById ("email").value,
+            document.getElementById ("password").value)}
+    document.getElementById ("signin").addEventListener ("click", call , false);
+  </script>
     <div class="background">
       <ul class="background">
         <li></li>

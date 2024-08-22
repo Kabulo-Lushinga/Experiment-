@@ -5,8 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fusion</title>
     <link rel="stylesheet" href="styles.css" />
+
+    <script src="https://js.bytescale.com/sdk/v3"></script>
+    <script src="../scripts/video.js" type="module">
+      import {uploadVideo} from '../scripts/video.js';
+      // import * as Bytescale from "@bytescale/sdk"
+      const uploadManager = new Bytescale.UploadManager({
+        apiKey: "free" // Get API keys from: www.bytescale.com
+      });
+
+      const onFileSelected = async event => {
+        const file = event.target.files[0];
+
+        //upload to firebase
+        try {
+          /*const { fileUrl, filePath } = await uploadManager.upload({
+            data: file
+          });*/
+          uploadVideo(file);
+          /*alert(`File uploaded:\n${fileUrl}`);*/
+        } catch (e) {
+          alert(`Error:\n${e.message}`);
+        }
+      };
+    </script>
   </head>
   <body>
+  <script src="https://js.bytescale.com/sdk/v3"></script>
+
+
+
+  <script type="module" src="../scripts/video.js">
+    import {pickFile} from "../scripts/video.js";
+    pickFile();
+  </script>
     <header>
 
 
@@ -17,5 +49,12 @@
     </main>
     <a href="signin.html">Sign up</a>
     <a href="login.html">Login</a>
+    <input type="file" onchange="onFileSelected(event)" />
+
+  <script>
+    // DOM Elements
+    const h1           = document.getElementsByTagName("h1")[0]
+    const uploadButton = document.getElementsByTagName("input")[0]
+  </script>
   </body>
 </html>

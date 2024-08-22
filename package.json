@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "@bytescale/sdk": "^3.45.0",
+    "file-picker": "^0.1.8",
     "touch": "^3.1.1"
   },
   "type": "module"
